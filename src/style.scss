@@ -1,0 +1,146 @@
+.layoutElement {
+  min-height: (100vh);
+
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.footerText {
+  width: 100%;
+  text-align: center;
+
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+
+  padding-bottom: 0.5rem;
+}
+
+.headerLink {
+  width: fit-content;
+}
+
+a {
+  text-decoration: none;
+}
+
+$mainPadding: 20px;
+
+.mainWrapper {
+  padding: 40px $mainPadding;
+}
+
+.inputWrapper {
+  width: 100%;
+  max-width: 600px;
+}
+
+.pageContent {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.inputsRow {
+  margin-top: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.marginTop {
+  margin-top: 15px;
+}
+
+select,
+.option,
+.gameName {
+  text-transform: capitalize;
+}
+
+.cards,
+.diamonds {
+  display: flex;
+  justify-content: center;
+
+  & img {
+    $margin: 5px;
+    margin: 0 #{$margin / 2};
+    width: calc(20% - #{$margin});
+  }
+}
+
+.blackJackCards {
+  & img {
+    min-width: 100px;
+  }
+}
+
+.allCardsWrapper {
+  max-width: 100%;
+
+  margin-top: 20px;
+}
+.allCardsList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  & img {
+    max-width: 100px;
+    margin: 2.5px;
+  }
+}
+
+.minesField {
+  display: grid;
+  grid-template-columns: repeat(5, 50px);
+  grid-template-rows: repeat(5, 50px);
+  align-items: center;
+  justify-items: center;
+  gap: 10px;
+
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.mineDiamond {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.mineBomb {
+  width: 50px;
+  height: 50px;
+
+  margin-top: -10px;
+}
+
+.tower {
+}
+.line {
+  display: flex;
+  width: fit-content;
+
+  margin: 0 auto;
+
+  & img {
+    max-width: 50px;
+  }
+}
+.towerCell {
+}
+
+.tableWrapper {
+  max-width: calc(100vw - (#{$mainPadding} * 2));
+  overflow: auto;
+}
+
+.error {
+  text-align: center;
+}
