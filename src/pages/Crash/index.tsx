@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Checking, Input, PageTemplate } from "components";
 import { calculateCrashResult, CrashResult } from "calculates";
-import { globalConfig } from "config";
+import { globalConfig, mainBranch } from "config";
 
 const Crash = () => {
   const [serverSeed, setServerSeed] = useState("");
@@ -75,7 +75,9 @@ const Crash = () => {
           </a>
         </p>
 
-        <Checking sourceLink="https://github.com/FaucetPayio/verify/blob/main/src/calculates/crash.ts" />
+        <Checking
+          sourceLink={`https://github.com/FaucetPayio/verify/blob/${mainBranch}/src/calculates/crash.ts`}
+        />
 
         <div className="pageContent">
           <div className="inputsRow">

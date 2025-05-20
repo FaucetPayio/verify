@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Checking, Input, PageTemplate } from "components";
 import { calculateLottery } from "calculates";
+import { mainBranch } from "config";
 
 const Lottery = () => {
   const [clientSeed, setClientSeed] = useState("");
@@ -51,7 +52,7 @@ const Lottery = () => {
           </li>
         </ul>
 
-        <Checking sourceLink="https://github.com/FaucetPayio/verify/blob/main/src/calculates/lottery.ts" />
+        <Checking sourceLink={`https://github.com/FaucetPayio/verify/blob/${mainBranch}/src/calculates/lottery.ts`} />
 
         <div className="pageContent">
           <div className="inputsRow">

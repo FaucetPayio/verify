@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Checking, Input, PageTemplate } from "components";
 import { calculateKeno } from "calculates";
+import { mainBranch } from "config";
 
 const Keno = () => {
   const [clientSeed, setClientSeed] = useState("");
@@ -43,7 +44,7 @@ const Keno = () => {
           </li>
         </ul>
 
-        <Checking sourceLink="https://github.com/FaucetPayio/verify/blob/main/src/calculates/keno.ts" />
+        <Checking sourceLink={`https://github.com/FaucetPayio/verify/blob/${mainBranch}/src/calculates/keno.ts`} />
 
         <div className="pageContent">
           <div className="inputsRow">

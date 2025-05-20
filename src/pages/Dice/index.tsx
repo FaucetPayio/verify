@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Checking, Input, PageTemplate } from "components";
 import { calculateDiceResult } from "calculates";
+import { mainBranch } from "config";
 
 const Dice = () => {
   const [clientSeed, setClientSeed] = useState("");
@@ -48,7 +49,7 @@ const Dice = () => {
           </li>
         </ul>
 
-        <Checking sourceLink="https://github.com/FaucetPayio/verify/blob/main/src/calculates/dice.ts" />
+        <Checking sourceLink={`https://github.com/FaucetPayio/verify/blob/${mainBranch}/src/calculates/dice.ts`} />
 
         <div className="pageContent">
           <div className="inputsRow">

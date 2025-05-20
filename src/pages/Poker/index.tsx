@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import { Checking, Input, PageTemplate, CardRow } from "components";
 import { calculateVideoPoker } from "calculates";
+import { mainBranch } from "config";
 
 const Poker = () => {
   const [clientSeed, setClientSeed] = useState("");
@@ -49,7 +50,7 @@ const Poker = () => {
           </li>
         </ul>
 
-        <Checking sourceLink="https://github.com/FaucetPayio/verify/blob/main/src/calculates/poker.ts" />
+        <Checking sourceLink={`https://github.com/FaucetPayio/verify/blob/${mainBranch}/src/calculates/poker.ts`} />
 
         <div className="pageContent">
           <div className="inputsRow">

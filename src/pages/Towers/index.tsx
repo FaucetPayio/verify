@@ -5,6 +5,7 @@ import { repeat } from "utils";
 
 import win from "./towers/crystal.png";
 import loss from "./towers/bomb.png";
+import { mainBranch } from "config";
 
 export type TowersDifficulty = "easy" | "medium" | "wicked" | "hard" | "brutal";
 /*** true -- fish
@@ -68,7 +69,7 @@ const Towers = () => {
           </li>
         </ul>
 
-        <Checking sourceLink="https://github.com/FaucetPayio/verify/blob/main/src/calculates/towers.ts" />
+        <Checking sourceLink={`https://github.com/FaucetPayio/verify/blob/${mainBranch}/src/calculates/towers.ts`} />
 
         <div className="pageContent">
           <div className="inputsRow">

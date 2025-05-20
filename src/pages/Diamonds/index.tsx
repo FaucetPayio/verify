@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Checking, Field, Input, PageTemplate } from "components";
 import { calculateDiamonds } from "calculates";
 import { diamondsList } from "./list";
+import { mainBranch } from "config";
 
 const Diamonds = () => {
   const [clientSeed, setClientSeed] = useState("");
@@ -45,7 +46,7 @@ const Diamonds = () => {
           </li>
         </ul>
 
-        <Checking sourceLink="https://github.com/FaucetPayio/verify/blob/main/src/calculates/diamonds.ts" />
+        <Checking sourceLink={`https://github.com/FaucetPayio/verify/blob/${mainBranch}/src/calculates/diamonds.ts`} />
 
         <div className="pageContent">
           <div className="inputsRow">

@@ -8,6 +8,7 @@ import {
   Input,
   PageTemplate,
 } from "components";
+import { mainBranch } from "config";
 
 const BlackJack = () => {
   const [clientSeed, setClientSeed] = useState("");
@@ -56,7 +57,7 @@ const BlackJack = () => {
           </li>
         </ul>
 
-        <Checking sourceLink="https://github.com/FaucetPayio/verify/blob/main/src/calculates/blackjack.ts" />
+        <Checking sourceLink={`https://github.com/FaucetPayio/verify/blob/${mainBranch}/src/calculates/blackjack.ts`} />
 
         <div className="pageContent">
           <div className="inputsRow">

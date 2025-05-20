@@ -5,6 +5,7 @@ import { calculateMines } from "calculates";
 import diamond from "./assets/crystal.png";
 import bomb from "./assets/mine.png";
 import { repeat } from "utils";
+import { mainBranch } from "config";
 
 const maxMinesAmount = 24;
 const mines = repeat(maxMinesAmount, (i) => i + 1);
@@ -51,7 +52,7 @@ const Mines = () => {
           </li>
         </ul>
 
-        <Checking sourceLink="https://github.com/FaucetPayio/verify/blob/main/src/calculates/mines.ts" />
+        <Checking sourceLink={`https://github.com/FaucetPayio/verify/blob/${mainBranch}/src/calculates/mines.ts`} />
 
         <div className="pageContent">
           <div className="inputsRow">

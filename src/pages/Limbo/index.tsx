@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import { Checking, Input, PageTemplate } from "components";
 import { calcluateLimbo } from "calculates";
+import { mainBranch } from "config";
 
 const Limbo = () => {
   const [clientSeed, setClientSeed] = useState("");
@@ -48,7 +49,7 @@ const Limbo = () => {
           </li>
         </ul>
 
-        <Checking sourceLink="https://github.com/FaucetPayio/verify/blob/main/src/calculates/limbo.ts" />
+        <Checking sourceLink={`https://github.com/FaucetPayio/verify/blob/${mainBranch}/src/calculates/limbo.ts`} />
 
         <div className="pageContent">
           <div className="inputsRow">

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Checking, Field, Input, PageTemplate } from "components";
 import { calculatePlinko, PlinkoRisk } from "calculates";
+import { mainBranch } from "config";
 
 const riskValues: PlinkoRisk[] = ["low", "medium", "high"];
 const rows = [8, 9, 10, 11, 12, 13, 14, 15, 16] as const;
@@ -54,7 +55,7 @@ const Plinko = () => {
           </li>
         </ul>
 
-        <Checking sourceLink="https://github.com/FaucetPayio/verify/blob/main/src/calculates/plinko.ts"  />
+        <Checking sourceLink={`https://github.com/FaucetPayio/verify/blob/${mainBranch}/src/calculates/plinko.ts`}  />
 
         <div className="pageContent">
           <div className="inputsRow">
