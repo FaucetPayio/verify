@@ -10,7 +10,7 @@ export const calculateBlackJack = (
   const roll_numbers: number[] = [];
   let position = 0;
 
-  const md = forge.md.sha256.create();
+  const md = forge.md.sha512.create();
   md.update(server_seed);
   const server_seed_hash = md.digest().toHex();
 
@@ -18,7 +18,7 @@ export const calculateBlackJack = (
 
   for (let n = 0; n < 7; n++) {
     const hash_series = forge.hmac.create();
-    hash_series.start("sha256", server_seed);
+    hash_series.start("sha512", server_seed);
     hash_series.update(client_seed + ":" + nonce + ":" + n);
     const hash_result = hash_series.digest().toHex();
 
@@ -29,10 +29,10 @@ export const calculateBlackJack = (
   }
 
   for (let x = 52; x > 0; x--) {
-    const seedForNum_1 = parseInt(seeds[position + 0], 16) / Math.pow(256, 1);
-    const seedForNum_2 = parseInt(seeds[position + 1], 16) / Math.pow(256, 2);
-    const seedForNum_3 = parseInt(seeds[position + 2], 16) / Math.pow(256, 3);
-    const seedForNum_4 = parseInt(seeds[position + 3], 16) / Math.pow(256, 4);
+    const seedForNum_1 = parseInt(seeds[position + 0], 32) / Math.pow(512, 1);
+    const seedForNum_2 = parseInt(seeds[position + 1], 32) / Math.pow(512, 2);
+    const seedForNum_3 = parseInt(seeds[position + 2], 32) / Math.pow(512, 3);
+    const seedForNum_4 = parseInt(seeds[position + 3], 32) / Math.pow(512, 4);
 
     let num1 = parseFloat(seedForNum_1.toString()).toFixed(12);
     let num2 = parseFloat(seedForNum_2.toString()).toFixed(12);
