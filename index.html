@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+    Security policy: this page may load only its own files, and connect-src 'none'
+    blocks every request after loading (no fetch, no XHR, no WebSocket, no beacons).
+    Whatever you type stays in your browser.
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>FaucetPay Verify · Check that every game result is fair</title>
+  <meta name="description" content="Check any FaucetPay game result yourself. Paste your seeds and your own browser re-calculates the result with standard, open-source maths. Dice, Crash, Meme Trade, Limbo, Plinko, Mines, Chicken, Pump, Packs, HiLo, Snakes and more.">
+  <meta name="theme-color" content="#14161a">
+  <meta property="og:title" content="FaucetPay Verify">
+  <meta property="og:description" content="Every result was locked in before you played. Check it yourself in 10 seconds.">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#app">Skip to content</a>
+  <div class="glow" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#/" aria-label="FaucetPay Verify home">
+        <img src="assets/logo.svg" alt="FaucetPay" width="132" height="31">
+        <span class="brand-tag">Verify</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#how">How it works</a>
+        <a href="#games">Games</a>
+        <a href="#try">Try it</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-outline btn-sm topbar-cta" href="https://faucetpay.io/play" rel="noopener">faucetpay.io</a>
+    </div>
+  </header>
+
+  <main id="app">
+    <noscript>
+      <div class="container noscript">
+        <h1>Please turn on JavaScript</h1>
+        <p>The checks run in your browser with JavaScript. Nothing is sent anywhere.</p>
+      </div>
+    </noscript>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.svg" alt="FaucetPay" width="112" height="27">
+        <p>Provably fair verifier. Runs entirely in your browser - nothing you enter ever leaves it.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="https://faucetpay.io" rel="noopener">faucetpay.io</a>
+        <a href="https://github.com/FaucetPayio/verify" rel="noopener">Source code on GitHub</a>
+        <a href="THIRD-PARTY-NOTICES.txt">Third-party notices</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/vendor/seedrandom.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/fair/dice.js"></script>
+  <script src="js/fair/limbo.js"></script>
+  <script src="js/fair/roulette.js"></script>
+  <script src="js/fair/plinko.js"></script>
+  <script src="js/fair/diamonds.js"></script>
+  <script src="js/fair/towers.js"></script>
+  <script src="js/fair/mines.js"></script>
+  <script src="js/fair/blackjack.js"></script>
+  <script src="js/fair/chicken.js"></script>
+  <script src="js/fair/pump.js"></script>
+  <script src="js/fair/packs.js"></script>
+  <script src="js/fair/hilo.js"></script>
+  <script src="js/fair/snakes.js"></script>
+  <script src="js/fair/crash.js"></script>
+  <script src="js/fair/lottery.js"></script>
+  <script src="js/fair/memetrade.js"></script>
+  <script src="js/fair/faucetdice.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/views.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
